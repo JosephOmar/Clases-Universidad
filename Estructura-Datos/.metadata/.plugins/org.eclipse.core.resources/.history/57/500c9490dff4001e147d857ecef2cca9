@@ -1,0 +1,24 @@
+package cursoED.actividades;
+
+public class MCD {
+	
+	public static int mcd(int a, int b) {
+		int menor;
+        int mcd = 1; // Inicializar con 1, ya que 1 es divisor de todos los números
+        
+        if (a == b) {
+            return a; // Si a y b son iguales, su MCD es a (o b)
+        } else if (a < b) {
+            menor = a;
+        } else {
+            menor = b;
+        }
+        
+        for (int i = 1; i <= menor; i++) {
+            if (a % i == 0 && b % i == 0) {
+                mcd = i; // Actualizar mcd solo si encontramos un divisor común
+            }
+        }
+        return mcd;
+	}
+}

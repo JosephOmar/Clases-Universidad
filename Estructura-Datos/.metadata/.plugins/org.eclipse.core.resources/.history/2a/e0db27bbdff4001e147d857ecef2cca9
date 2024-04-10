@@ -1,0 +1,25 @@
+package cursoED.actividades;
+
+public class MCD {
+	
+	public static int mcd(int a, int b) {
+		int mcd = 1; // Inicializar con 1, ya que 1 es divisor de todos los números
+        
+        // Si a y b son iguales, su MCD es a (o b)
+        if (a == b) {
+            return a;
+        }
+        
+        // Encuentra el menor de los dos números
+        int menor = Math.min(a, b);
+        
+        // Busca el máximo común divisor
+        for (int i = 2; i <= menor; i++) {
+            if (a % i == 0 && b % i == 0) {
+                mcd = i; // Actualizar mcd solo si encontramos un divisor común
+            }
+        }
+        
+        return mcd;
+	}
+}

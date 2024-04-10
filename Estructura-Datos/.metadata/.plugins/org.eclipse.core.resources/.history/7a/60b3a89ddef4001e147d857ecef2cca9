@@ -1,0 +1,16 @@
+package cursoED.actividades;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class MCDTest {
+
+	@Test
+	void testMcd() {
+		int a = 24;
+		int b = 36;
+		assertEquals(6,MCD.mcd(a,b));
+	}
+
+}

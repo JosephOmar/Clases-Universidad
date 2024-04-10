@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="MCDTest" project="cursoED.semana2" tests="1" started="1" failures="1" errors="0" ignored="0">
+  <testsuite name="cursoED.actividades.MCDTest" time="0.028" displayname="MCDTest" uniqueid="[engine:junit-jupiter]/[class:cursoED.actividades.MCDTest]">
+    <testcase name="testMcd" classname="cursoED.actividades.MCDTest" time="0.028" displayname="testMcd()" uniqueid="[engine:junit-jupiter]/[class:cursoED.actividades.MCDTest]/[method:testMcd()]">
+      <failure>
+        <expected>6</expected>
+        <actual>12</actual>
+        org.opentest4j.AssertionFailedError: expected: &lt;6&gt; but was: &lt;12&gt;&#13;
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)&#13;
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)&#13;
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)&#13;
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)&#13;
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)&#13;
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)&#13;
+	at cursoED.actividades.MCDTest.testMcd(MCDTest.java:14)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)&#13;
+&#13;
+
+      </failure>
+    </testcase>
+  </testsuite>
+</testrun>

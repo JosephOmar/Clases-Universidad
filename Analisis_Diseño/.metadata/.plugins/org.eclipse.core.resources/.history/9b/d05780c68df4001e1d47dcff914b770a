@@ -1,0 +1,47 @@
+package CuadradoMagico;
+
+public class ComprobacionesCuadradoMagico {
+    
+    public static boolean esCuadradoMagico(CuadradoMagico cuadrado, int n) {
+    // Comprobar que la suma de cada fila, columna y diagonal sea igual
+    int[][] matriz = cuadrado.getCuadrado(); // Obtener la matriz del cuadrado mágico
+
+    int sumaDiagonalPrincipal = 0;
+    int sumaDiagonalSecundaria = 0;
+
+    for (int i = 0; i < n; i++) {
+        int sumaFila = 0;
+        int sumaColumna = 0;
+        for (int j = 0; j < n; j++) {
+            sumaFila += matriz[i][j];
+            sumaColumna += matriz[j][i];
+        }
+        if (sumaFila != sumaColumna || sumaFila != matriz[0][i] + matriz[1][i] + matriz[2][i]) {
+            return false;
+        }
+        sumaDiagonalPrincipal += matriz[i][i];
+        sumaDiagonalSecundaria += matriz[i][n - 1 - i];
+    }
+
+    return sumaDiagonalPrincipal == sumaDiagonalSecundaria && sumaDiagonalPrincipal == matriz[0][0] + matriz[1][1] + matriz[2][2];
+}
+
+    public static boolean contieneNumerosValidos(CuadradoMagico cuadrado, int n) {
+        int[][] matriz = cuadrado.getCuadrado();
+        
+        boolean[] numeros = new boolean[n * n + 1];
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                if (matriz[i][j] < 1 || matriz[i][j] > n * n || numeros[matriz[i][j]]) {
+                    return false;
+                }
+                numeros[matriz[i][j]] = true;
+            }
+        }
+        return true;
+    }
+
+    public static boolean esCuadradoMagicoImpar(int n) {
+        return n % 2 != 0;
+    }
+}
